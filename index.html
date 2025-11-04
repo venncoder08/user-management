@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Quản lý đăng ký thông tin</title>
+</head>
+<body style="min-width: 900px;">
+    <header class="d-flex justify-content-center">
+        <h1>23127522</h1>
+    </header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary d-flex justify-content-center m-4">
+        <div class="container-fluid justify-content-center" style="width: fit-content;">
+          <div class="collapse navbar-collapse show" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link disabled" href="#">Home</a></li>
+              <li class="nav-item"><a class="nav-link active" href="#">About</a></li>
+              <li class="nav-item"><a class="nav-link disabled" href="#">Service</a></li>
+              <li class="nav-item"><a class="nav-link disabled" aria-disabled="true">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+    </nav>      
+
+    <div class="d-flex gap-5 p-4 m-4">
+        <form style="width: 300px;" id="user-form">
+            <h4>Registration Form</h4>
+            <div class="mb-3">
+                <label for="firstname" class="form-label">First name</label>
+                <input type="text" id="firstname" class="form-control" required>
+                <div class="form-message"></div>
+            </div>
+            <div class="mb-3">
+                <label for="lastname" class="form-label">Last name</label>
+                <input type="text" id="lastname" class="form-control" required>
+                <div class="form-message"></div>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email">
+                <div class="form-message"></div>
+            </div>
+            <button type="submit" class="btn btn-success" id="update-btn">Update</button>
+            <button type="submit" class="btn btn-primary" id="register-btn">Register</button>
+        </form>
+        
+        <section class="flex-grow-1">
+            <h4>Current List</h4>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">FULL NAME</th>
+                    <th scope="col">EMAIL</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody id="user-table-body">
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="./handle.js"></script>
+</body>
+</html>
