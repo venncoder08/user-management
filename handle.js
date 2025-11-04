@@ -55,7 +55,6 @@ function handleRegister(e) {
     users.push(data);
     renderUsers();
     userForm.reset();
-    alert("Thêm người dùng thành công!");
 }
 
 function startEdit(index) {
@@ -89,7 +88,6 @@ function handleUpdate(e) {
     userForm.reset();
     registerBtn.disabled = false;
     updateBtn.disabled = true;
-    alert("Cập nhật thành công!");
 }
 
 function handleDelete(index) {
